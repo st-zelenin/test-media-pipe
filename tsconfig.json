@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "lib": [
+      "es2016",
+      "dom"
+    ],
+    "moduleResolution": "Node"
+  }
+}

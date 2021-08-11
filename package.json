@@ -1,0 +1,28 @@
+{
+  "name": "test-media-pipe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "dev": "npm run copy-static && parcel index.html",
+    "build": "npm run copy-static && parcel build index.html --public-url ./",
+    "deploy": "npm run build && gh-pages -d dist",
+    "copy-static": "rm -rf dist/ && mkdir dist && mkdir dist/holistic && cp -r node_modules/@mediapipe/holistic/* dist/holistic"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gh-pages": "^3.2.3",
+    "parcel-bundler": "^1.12.5",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "@mediapipe/camera_utils": "^0.3.1620247984",
+    "@mediapipe/control_utils": "^0.6.1626288889",
+    "@mediapipe/drawing_utils": "^0.3.1620248257",
+    "@mediapipe/holistic": "^0.4.1628005088"
+  },
+  "browserslist": [
+    "last 1 Chrome version"
+  ]
+}
